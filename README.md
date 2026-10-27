@@ -3,10 +3,12 @@
 扫描 coding agent 的会话记录，找出**读过之后磁盘上又被改过**的文件——在它继续改代码之前，把这些已经过期的上下文揪出来。
 
 ```bash
+git clone https://github.com/kylemarvin884/openbot-stalectx
+cd stalectx
 node src/cli.mjs scan ~/.claude/projects/<project>/<session>.jsonl
 ```
 
-Node >= 22，零依赖，不需要 API key，不调用任何模型。
+Node >= 22，零依赖，不需要 `npm install`，不需要 API key，不调用任何模型。
 
 ## 为什么需要
 
